@@ -1,4 +1,4 @@
-<img width="884" height="1779" alt="image" src="https://github.com/user-attachments/assets/db3b0f65-9f9f-4a37-9fef-bc24335a0e21" /># PantheraID - Showcase
+# PantheraID - Showcase
 
 Sistema web para gerenciamento, emissão e validação de crachás corporativos.
 
@@ -270,27 +270,27 @@ Quando um crachá ultrapassa sua data limite, seu estado pode ser atualizado aut
 
 ### Dashboard
 
-<img width="878" height="1791" alt="image" src="https://github.com/user-attachments/assets/36923860-a003-4186-a979-9bf7cc9d37e8" />
+<img width="440" height="950" alt="image" src="https://github.com/user-attachments/assets/36923860-a003-4186-a979-9bf7cc9d37e8" />
 
 
 ### Solicitação de crachá
 
-<img width="460" height="1600" alt="image" src="https://github.com/user-attachments/assets/7f52ca51-087d-4909-a9e2-1c535960b1c8" />
+<img width="440" height="1600" alt="image" src="https://github.com/user-attachments/assets/7f52ca51-087d-4909-a9e2-1c535960b1c8" />
 
 
 ### Aprovação de solicitações
 
-<img width="415" height="831" alt="image" src="https://github.com/user-attachments/assets/87b56291-4880-4efa-a836-1d4e6855f51c" />
+<img width="440" height="950" alt="image" src="https://github.com/user-attachments/assets/87b56291-4880-4efa-a836-1d4e6855f51c" />
 
 
 ### Validação por QR Code
 
-<img width="884" height="1779" alt="image" src="https://github.com/user-attachments/assets/a25aeea9-2e2e-4681-a55b-59825e9c142c" />
+<img width="440" height="950" alt="image" src="https://github.com/user-attachments/assets/a25aeea9-2e2e-4681-a55b-59825e9c142c" />
 
 
 ### Gerenciamento de crachás
 
-<img width="308" height="632" alt="image" src="https://github.com/user-attachments/assets/052cb985-507c-4b05-bd51-0f2552a51dc1" />
+<img width="440" height="950" alt="image" src="https://github.com/user-attachments/assets/052cb985-507c-4b05-bd51-0f2552a51dc1" />
 
 ---
 
