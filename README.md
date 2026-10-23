@@ -1,8 +1,13 @@
+<img width="180" height="180" alt="apple-touch-icon" src="https://github.com/user-attachments/assets/c3d571c0-58fe-412a-be16-69916d5f8022" aling-self="middle"/>
+
 # PantheraID
 
 Sistema web de controle de acesso para shoppings: crachá digital com foto, aprovação em duas etapas e validação por QR code na portaria. Inclui também a gestão de ordens de serviço de prestadores.
 
 > Em desenvolvimento. Os dados exibidos são fictícios.
+
+
+*Fluxo completo: solicitação, aprovação, crachá digital e validação na portaria.*
 
 ## Problema
 
@@ -26,29 +31,29 @@ O gerente da loja abre a ordem de serviço com o formulário de obra, que inclui
 > Algumas telas podem ter pequenos ajustes visuais.
 
 ### Tela de crachá do colaborador
-<img width="300" alt="MeuCracha" src="https://github.com/user-attachments/assets/99997d2b-ec22-4aff-b414-4f255b003ac0" />
+<img width="300" alt="Meu Cracha" src="https://github.com/user-attachments/assets/99997d2b-ec22-4aff-b414-4f255b003ac0" />
 
 
 ### Tela de solicitação de crachá
-<img width="300" alt="SolicitaçãoCracha pdf" src="https://github.com/user-attachments/assets/1c686c2d-8c37-406f-b2dc-868c67f7789b" />
+<img width="300" alt="Solicitação de crachá" src="https://github.com/user-attachments/assets/1c686c2d-8c37-406f-b2dc-868c67f7789b" />
 
 
 ### Tela de aprovação de crachás por gerentes e supervisor de segurança
-<img width="300" alt="AprovarCracha" src="https://github.com/user-attachments/assets/f14c0ed1-563e-4cb8-92f0-a6ceff1719b6" />
+<img width="300" alt="Aprovação de crachá" src="https://github.com/user-attachments/assets/f14c0ed1-563e-4cb8-92f0-a6ceff1719b6" />
 
 
 ### Tela de crachá válido
-<img width="300" alt="CrachaValidado" src="https://github.com/user-attachments/assets/bdf56824-8b4b-48e0-aa2d-1a02cffdedca" />
+<img width="300" alt="Crachá válido" src="https://github.com/user-attachments/assets/bdf56824-8b4b-48e0-aa2d-1a02cffdedca" />
 
-### Tela de gerenciamentos dos crachás
+### Tela de gerenciamento dos crachás
 > Para gerentes, aparecem somente os crachás da sua loja. Para o supervisor de segurança aparecem todos.
-<img width="300" alt="TodosOsCrachas" src="https://github.com/user-attachments/assets/b25eda8f-c3ff-42fd-a076-81b3edcc45bb" />
+<img width="300" alt="Gerenciamento de crachás" src="https://github.com/user-attachments/assets/b25eda8f-c3ff-42fd-a076-81b3edcc45bb" />
 
 ### Tela de solicitação de ordem de serviço
-<img width="300" alt="NovaOS pdf" src="https://github.com/user-attachments/assets/ad5d3313-da35-4277-844d-50bd634ab907" />
+<img width="300" alt="Solicitação de ordem de serviço" src="https://github.com/user-attachments/assets/ad5d3313-da35-4277-844d-50bd634ab907" />
 
 ### Tela de gerenciamento de OS
-<img width="300" alt="OSAtivas pdf" src="https://github.com/user-attachments/assets/14fc8b80-b141-4a56-a704-6cc4931c675a" />
+<img width="300" alt="Gerenciamento de ordens de serviço" src="https://github.com/user-attachments/assets/14fc8b80-b141-4a56-a704-6cc4931c675a" />
 
 
 ## Stack
