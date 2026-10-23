@@ -1,367 +1,51 @@
-# PantheraID - Showcase
+# PantheraID
 
-Sistema web para gerenciamento, emissão e validação de crachás corporativos.
+Sistema web de controle de acesso para shoppings: crachá digital com foto, aprovação em duas etapas e validação por QR code na portaria. Inclui também a gestão de ordens de serviço de prestadores.
 
-Este repositório é uma apresentação pública do **PantheraID**. O código-fonte da aplicação é mantido em um repositório privado.
+> Em desenvolvimento. Os dados exibidos são fictícios.
 
-> O projeto está em desenvolvimento contínuo. Funcionalidades e interface podem sofrer alterações.
+[GIF do fluxo: cadastro → aprovação → crachá com QR code → validação na portaria]
 
----
+## Problema
 
-## Sobre o projeto
+Crachás de papel não têm controle de validade nem de revogação. Quem é desligado continua com o crachá, e a portaria não tem como saber. Ordens de serviço circulam por mensagens, sem histórico pesquisável.
 
-O PantheraID surgiu com o objetivo de digitalizar e centralizar o processo de emissão e gerenciamento de crachás dentro de organizações que possuem diferentes lojas, setores e níveis de acesso.
+## Solução
 
-A aplicação permite acompanhar todo o ciclo de vida de um crachá, desde o cadastro e verificação do usuário até a solicitação, aprovação, emissão, validação e eventual renovação ou revogação.
+- **Cadastro com verificação de identidade**, com leitura do documento por OCR e validação automática da foto.
+- **Aprovação em duas etapas**, pela gestão da loja e pela chefia de segurança.
+- **Crachá digital com validade**, com QR code que expira em 60 segundos.
+- **Validação na portaria**, com exibição de foto, nome e situação do crachá.
+- **Revogação, expiração automática e log de auditoria** das ações sensíveis.
+- **Perfis com permissões** verificadas no servidor a cada requisição.
 
-Em vez de depender de processos manuais e informações espalhadas, o sistema concentra os dados em um único ambiente e aplica regras específicas de acordo com o perfil de cada usuário.
+## Ordens de serviço de prestadores
 
----
+O gerente da loja abre a ordem de serviço com o formulário de obra, que inclui horários permitidos, EPIs e documentos técnicos, e a lista de trabalhadores. O setor de Operação aprova ou reprova, com motivo registrado e aviso por e-mail. A segurança acompanha as atividades em andamento em uma aba que considera o horário do shopping, inclusive o turno que passa da meia-noite.
 
-## Fluxo principal
+## Telas
 
-O funcionamento básico da plataforma segue este fluxo:
+![Dashboard](https://github.com/user-attachments/assets/36923860-a003-4186-a979-9bf7cc9d37e8)
+![Solicitação de crachá](https://github.com/user-attachments/assets/7f52ca51-087d-4909-a9e2-1c535960b1c8)
+![Aprovação de solicitações](https://github.com/user-attachments/assets/87b56291-4880-4efa-a836-1d4e6855f51c)
+![Validação por QR Code](https://github.com/user-attachments/assets/a25aeea9-2e2e-4681-a55b-59825e9c142c)
+![Gerenciamento de crachás](https://github.com/user-attachments/assets/052cb985-507c-4b05-bd51-0f2552a51dc1)
 
-```text
-Cadastro
-   ↓
-Verificação de identidade
-   ↓
-Solicitação de crachá
-   ↓
-Análise / aprovação
-   ↓
-Emissão do crachá
-   ↓
-Validação via QR Code
-   ↓
-Renovação, expiração ou revogação
-```
+## Stack
 
-Dependendo do perfil do usuário, a solicitação pode passar por diferentes etapas de aprovação antes da emissão.
-
----
-
-## Funcionalidades
-
-Atualmente, o PantheraID conta com funcionalidades como:
-
-* Cadastro e autenticação de usuários
-* Recuperação de senha por e-mail
-* Verificação de usuário através de documento
-* OCR para identificação de informações no documento
-* Solicitação de crachá com envio de foto
-* Fluxo de aprovação por diferentes níveis de acesso
-* Aprovação e rejeição de solicitações
-* Registro do motivo de rejeição
-* Emissão de crachá digital
-* Validade automática dos crachás
-* Renovação de crachás
-* Revogação de crachás
-* Expiração automática
-* QR Code para identificação
-* Leitura e validação de QR Code
-* Consulta de crachás ativos e inativos
-* Gerenciamento de lojas
-* Controle de acesso baseado em perfil e setor
-* Integração com pagamentos
-* Envio de e-mails transacionais
-
----
-
-## Fluxo de aprovação
-
-Uma das principais partes do sistema é o controle do processo de aprovação.
-
-Uma solicitação pode passar por diferentes responsáveis de acordo com o tipo de usuário e seu vínculo com a organização.
-
-De forma simplificada:
-
-```text
-Usuário
-   ↓
-Solicitação de crachá
-   ↓
-Gestor responsável
-   ↓
-Segurança
-   ↓
-Crachá aprovado
-```
-
-O sistema registra informações relacionadas às aprovações e rejeições, permitindo maior rastreabilidade durante o processo.
-
----
-
-## Perfis e permissões
-
-O PantheraID trabalha com diferentes tipos de usuário, cada um com permissões específicas dentro da plataforma.
-
-Entre os perfis existentes estão:
-
-* Colaborador de loja
-* Gestor de loja
-* Usuário vinculado à academia (Alunos)
-* Administração
-* Vigilância
-* Chefe de segurança
-* Super administrador
-
-As páginas, ações e informações disponíveis são controladas conforme o perfil e, quando necessário, o setor do usuário.
-
----
-
-## Crachá digital
-
-Após a conclusão do processo de aprovação, o sistema gera o crachá do usuário.
-
-Cada crachá possui informações relacionadas ao usuário, sua solicitação e período de validade.
-
-Os crachás podem assumir estados como:
-
-```text
-ACTIVE
-EXPIRED
-REVOKED
-```
-
-Também existe controle para impedir que um usuário mantenha múltiplos crachás ativos simultaneamente.
-
----
-
-## Validação por QR Code
-
-Os crachás podem ser validados através de QR Code.
-
-Usuários autorizados, como profissionais da segurança, podem utilizar a câmera do dispositivo para realizar a leitura.
-
-Após a leitura, o sistema consulta o crachá e verifica informações como:
-
-* existência do crachá;
-* status atual;
-* período de validade;
-* revogação;
-* vínculo com o usuário.
-
-Isso permite que a validação seja realizada rapidamente em pontos de acesso.
-
----
-
-## Verificação de identidade
-
-Antes de determinadas operações, o usuário pode precisar realizar uma etapa de verificação.
-
-O sistema permite o envio de documento e utiliza OCR para analisar seu conteúdo.
-
-Atualmente, essa funcionalidade possui integração com o **Google Cloud Vision**.
-
----
-
-## Tecnologias
-
-### Frontend
-
-* React
-* TypeScript
-* Vite
-* React Router
-* Axios
-* CSS Modules
-* Lucide React
-* React Toastify
-* HTML5 QR Code
-* PWA
-
-### Backend
-
-* Node.js
-* Express
-* JavaScript
-* Zod
-* JWT
-* bcrypt
-* Multer
-* Helmet
-* Express Rate Limit
-* Node Cron
-
-### Banco de dados e armazenamento
-
-* PostgreSQL
-* Supabase
-* Supabase Storage
-
-### Integrações
-
-* Google Cloud Vision
-* Mercado Pago
-* Resend
-
----
-
-## Arquitetura
-
-A aplicação é dividida em frontend e backend independentes.
-
-```text
-┌─────────────────────────────┐
-│          Frontend           │
-│   React + TypeScript + Vite │
-└──────────────┬──────────────┘
-               │
-               │ HTTP / API
-               ▼
-┌─────────────────────────────┐
-│           Backend           │
-│       Node.js + Express     │
-│                             │
-│  Autenticação               │
-│  Regras de negócio          │
-│  Controle de acesso         │
-│  Integrações                │
-└──────────────┬──────────────┘
-               │
-               ▼
-┌─────────────────────────────┐
-│          Supabase           │
-│                             │
-│  PostgreSQL                 │
-│  Storage                    │
-└─────────────────────────────┘
-```
-
-O frontend é responsável pela interface e interação com o usuário, enquanto o backend concentra autenticação, autorizações, validações, regras de negócio e comunicação com serviços externos.
-
----
+- **Front-end:** React, TypeScript, Vite e PWA
+- **Back-end:** Node.js e Express
+- **Banco de dados e armazenamento:** PostgreSQL via Supabase
+- **Integrações:** Google Cloud Vision (OCR), Resend (e-mails) e Mercado Pago (cobrança, opcional)
 
 ## Segurança
 
-Algumas das medidas implementadas atualmente incluem:
+Autenticação com sessão em cookie protegido, controle de acesso por perfil e setor, validação de dados no servidor e limites de requisições em rotas sensíveis. A revisão de segurança continua durante o desenvolvimento.
 
-* Hash de senhas com bcrypt
-* Autenticação utilizando JWT
-* JWT armazenado em cookie HTTP-only
-* Proteção de rotas
-* Controle de acesso baseado em roles
-* Controle adicional baseado em setores
-* Validação de dados
-* Rate limiting em rotas sensíveis
-* CORS
-* Helmet
-* Validação de permissões no backend
+## Status e próximos passos
 
-A segurança da aplicação continua sendo revisada durante o desenvolvimento.
-
----
-
-## Automação
-
-O backend possui tarefas agendadas para executar determinadas regras automaticamente.
-
-Um dos casos é a verificação periódica da validade dos crachás.
-
-Quando um crachá ultrapassa sua data limite, seu estado pode ser atualizado automaticamente para expirado sem necessidade de intervenção manual.
-
----
-
-## Screenshots
-
-> As imagens abaixo serão atualizadas conforme a evolução da interface.
-
-### Dashboard
-
-<img width="440" height="950" alt="image" src="https://github.com/user-attachments/assets/36923860-a003-4186-a979-9bf7cc9d37e8" />
-
-
-### Solicitação de crachá
-
-<img width="440" height="1600" alt="image" src="https://github.com/user-attachments/assets/7f52ca51-087d-4909-a9e2-1c535960b1c8" />
-
-
-### Aprovação de solicitações
-
-<img width="440" height="950" alt="image" src="https://github.com/user-attachments/assets/87b56291-4880-4efa-a836-1d4e6855f51c" />
-
-
-### Validação por QR Code
-
-<img width="440" height="950" alt="image" src="https://github.com/user-attachments/assets/a25aeea9-2e2e-4681-a55b-59825e9c142c" />
-
-
-### Gerenciamento de crachás
-
-<img width="440" height="950" alt="image" src="https://github.com/user-attachments/assets/052cb985-507c-4b05-bd51-0f2552a51dc1" />
-
----
-
-## Estrutura interna
-
-O projeto original possui uma estrutura dividida aproximadamente da seguinte maneira:
-
-```text
-/
-├── frontend/
-│   └── src/
-│       ├── Pages/
-│       ├── components/
-│       ├── contexts/
-│       ├── routes/
-│       └── services/
-│
-└── backend/
-    └── src/
-        ├── config/
-        ├── jobs/
-        ├── middlewares/
-        ├── modules/
-        ├── schemas/
-        ├── services/
-        └── utils/
-```
-
-Essa organização busca separar as responsabilidades e facilitar a manutenção conforme o sistema cresce.
-
----
-
-## Status do projeto
-
-🚧 **Em desenvolvimento**
-
-O PantheraID ainda está sendo desenvolvido e aprimorado.
-
-Algumas funcionalidades podem passar por alterações de arquitetura, interface ou regras de negócio durante a evolução do projeto.
-
-Entre os pontos que continuam sendo trabalhados estão melhorias de experiência do usuário, segurança, testes e evolução das integrações existentes.
-
----
-
-## Objetivo do projeto
-
-Além de solucionar um problema real de gerenciamento de identificação e acesso, o PantheraID também representa a aplicação prática de conceitos de desenvolvimento full stack, como:
-
-* arquitetura frontend/backend;
-* modelagem de banco de dados;
-* autenticação e autorização;
-* regras de negócio;
-* integração com APIs externas;
-* armazenamento de arquivos;
-* processamento de imagens;
-* QR Codes;
-* tarefas automatizadas;
-* desenvolvimento responsivo;
-* organização de uma aplicação em crescimento.
-
----
+Em desenvolvimento. Próximas etapas: testes de leitura do QR code em celulares reais, consulta de lojas na portaria e evolução das integrações.
 
 ## Código-fonte
 
-O código-fonte do PantheraID está atualmente armazenado em um **repositório privado**.
-
-Este repositório público existe para documentar o desenvolvimento, apresentar as funcionalidades e demonstrar a evolução do projeto sem expor sua implementação completa.
-
----
-
-## Sobre
-
-O PantheraID é um projeto em desenvolvimento e novas funcionalidades, melhorias e alterações serão adicionadas conforme a aplicação evolui.
-
+O código da aplicação está em um repositório privado. Este repositório documenta o desenvolvimento e apresenta as funcionalidades.
