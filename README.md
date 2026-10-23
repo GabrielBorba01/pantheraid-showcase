@@ -1,10 +1,20 @@
-<img width="180" height="180" alt="apple-touch-icon" src="https://github.com/user-attachments/assets/c3d571c0-58fe-412a-be16-69916d5f8022" aling-self="middle"/>
+<div align="center">
+<img width="180" height="180" alt="apple-touch-icon" src="https://github.com/user-attachments/assets/c3d571c0-58fe-412a-be16-69916d5f8022"/>
+
 
 # PantheraID
+
+</div>
 
 Sistema web de controle de acesso para shoppings: crachá digital com foto, aprovação em duas etapas e validação por QR code na portaria. Inclui também a gestão de ordens de serviço de prestadores.
 
 > Em desenvolvimento. Os dados exibidos são fictícios.
+
+<div align="center">
+
+https://github.com/user-attachments/assets/c88f7f9c-c60d-4e22-868a-29843e2c5174
+
+</div>
 
 
 *Fluxo completo: solicitação, aprovação, crachá digital e validação na portaria.*
@@ -61,7 +71,7 @@ O gerente da loja abre a ordem de serviço com o formulário de obra, que inclui
 - **Front-end:** React, TypeScript, Vite e PWA
 - **Back-end:** Node.js e Express
 - **Banco de dados e armazenamento:** PostgreSQL via Supabase
-- **Integrações:** Google Cloud Vision (OCR), Resend (e-mails) e Mercado Pago (cobrança, opcional)
+- **Integrações:** Google Cloud Vision (OCR) e Resend (e-mails)
 
 ## Segurança
 
