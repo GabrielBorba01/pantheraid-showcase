@@ -4,8 +4,6 @@ Sistema web de controle de acesso para shoppings: crachá digital com foto, apro
 
 > Em desenvolvimento. Os dados exibidos são fictícios.
 
-[GIF do fluxo: cadastro → aprovação → crachá com QR code → validação na portaria]
-
 ## Problema
 
 Crachás de papel não têm controle de validade nem de revogação. Quem é desligado continua com o crachá, e a portaria não tem como saber. Ordens de serviço circulam por mensagens, sem histórico pesquisável.
@@ -24,12 +22,34 @@ Crachás de papel não têm controle de validade nem de revogação. Quem é des
 O gerente da loja abre a ordem de serviço com o formulário de obra, que inclui horários permitidos, EPIs e documentos técnicos, e a lista de trabalhadores. O setor de Operação aprova ou reprova, com motivo registrado e aviso por e-mail. A segurança acompanha as atividades em andamento em uma aba que considera o horário do shopping, inclusive o turno que passa da meia-noite.
 
 ## Telas
+> Todos os dados presentes nas capturas de tela a seguir são fictícios. Todas as imagens presentes também são geradas por inteligência artificial e não representam fotos de pessoas reais.
+> Algumas telas podem ter pequenos ajustes visuais.
 
-![Dashboard](https://github.com/user-attachments/assets/36923860-a003-4186-a979-9bf7cc9d37e8)
-![Solicitação de crachá](https://github.com/user-attachments/assets/7f52ca51-087d-4909-a9e2-1c535960b1c8)
-![Aprovação de solicitações](https://github.com/user-attachments/assets/87b56291-4880-4efa-a836-1d4e6855f51c)
-![Validação por QR Code](https://github.com/user-attachments/assets/a25aeea9-2e2e-4681-a55b-59825e9c142c)
-![Gerenciamento de crachás](https://github.com/user-attachments/assets/052cb985-507c-4b05-bd51-0f2552a51dc1)
+### Tela de crachá do colaborador
+<img width="300" alt="MeuCracha" src="https://github.com/user-attachments/assets/99997d2b-ec22-4aff-b414-4f255b003ac0" />
+
+
+### Tela de solicitação de crachá
+<img width="300" alt="SolicitaçãoCracha pdf" src="https://github.com/user-attachments/assets/1c686c2d-8c37-406f-b2dc-868c67f7789b" />
+
+
+### Tela de aprovação de crachás por gerentes e supervisor de segurança
+<img width="300" alt="AprovarCracha" src="https://github.com/user-attachments/assets/f14c0ed1-563e-4cb8-92f0-a6ceff1719b6" />
+
+
+### Tela de crachá válido
+<img width="300" alt="CrachaValidado" src="https://github.com/user-attachments/assets/bdf56824-8b4b-48e0-aa2d-1a02cffdedca" />
+
+### Tela de gerenciamentos dos crachás
+> Para gerentes, aparecem somente os crachás da sua loja. Para o supervisor de segurança aparecem todos.
+<img width="300" alt="TodosOsCrachas" src="https://github.com/user-attachments/assets/b25eda8f-c3ff-42fd-a076-81b3edcc45bb" />
+
+### Tela de solicitação de ordem de serviço
+<img width="300" alt="NovaOS pdf" src="https://github.com/user-attachments/assets/ad5d3313-da35-4277-844d-50bd634ab907" />
+
+### Tela de gerenciamento de OS
+<img width="300" alt="OSAtivas pdf" src="https://github.com/user-attachments/assets/14fc8b80-b141-4a56-a704-6cc4931c675a" />
+
 
 ## Stack
 
